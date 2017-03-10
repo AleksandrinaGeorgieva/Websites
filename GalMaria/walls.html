@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GalMaria</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/css.css" />
+    <link type="text/css" rel="stylesheet" href="styles/__main.css" />
+    <script src="scripts/jquery-1.10.2.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/docready.js"></script>
+    <script>
+        $(document).ready(function (){
+            var $gallery = $('.gallery');
+            if($gallery) {
+                var imagesPaths = {
+                        'images/walls/0.jpg': '',
+                        'images/walls/1.jpg': '',
+                        'images/walls/2.jpg': ''
+                    },
+                    htmlString = '';
+                for (var i in imagesPaths) {
+                    htmlString += '<div class="gallery__img-block ">';
+                    htmlString += '<span class="">' + imagesPaths[i] + '</span>';
+                    htmlString += '<img src="' + i + '" thumb-url="' + i + '" class="">';
+                    htmlString += '</div>';
+                }
+                htmlString += '<div class="gallery__controls"></div>';
+                $gallery.append(htmlString);
+                $gallery.vitGallery({
+                    autoplay: true
+                })
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="header">
+</div>
+<main>
+    <div class="container body-content">
+        <div class="container mtb20">
+            <div class="row">
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                    <h1 id="typography">Стени</h1>
+                    <br>
+                    <p>
+
+                    </p>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                    <div class="gallery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div id="footer">
+</div>
+</body>
+</html>
