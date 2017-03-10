@@ -54,9 +54,9 @@
 .aboutBlock{
     position: absolute;
     top: 30px;
-    left: -100px;
-    padding: 20px;
-    font-size: 27px;
+    right: 0;
+    padding: 10px;
+    font-size: 20px;
     border-radius: 6px;
 }
 .headerLines{

@@ -12,13 +12,13 @@ $(function(){
             thumnailWidth: 90,
             thumnaiHeight: 60,
             thumbnailMargin: 5,
-            animateSpeed: 1000,
+            animateSpeed: 2000,
             description: true,
             imgPadding: 15,
             autoplay: false,
             autoplayDelay: 3000,
             fullscreen: false,
-            transition: 'slide' // slide crossfade
+            transition: 'crossfade' // slide crossfade
         });
     }
 });
