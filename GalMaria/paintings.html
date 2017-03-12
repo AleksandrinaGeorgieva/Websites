@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GalMaria</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/css.css" />
+    <link type="text/css" rel="stylesheet" href="styles/__main.css" />
+    <script src="scripts/jquery-1.10.2.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/docready.js"></script>
+    <script>
+        $(document).ready(function (){
+            var $gallery = $('.gallery');
+            if($gallery) {
+                var imagesPaths = {
+                        'images/paintings/0.png': '',
+                        'images/paintings/1.png': '',
+                        'images/paintings/2.png': '',
+                        'images/paintings/3.png': '',
+                        'images/paintings/4.png': '',
+                        'images/paintings/5.png': '',
+                        'images/paintings/6.png': '',
+                        'images/paintings/7.png': '',
+                        'images/paintings/8.png': ''
+                    },
+                    htmlString = '';
+                for (var i in imagesPaths) {
+                    htmlString += '<div class="gallery__img-block ">';
+                    htmlString += '<span class="">' + imagesPaths[i] + '</span>';
+                    htmlString += '<img src="' + i + '" thumb-url="' + i + '" class="">';
+                    htmlString += '</div>';
+                }
+                htmlString += '<div class="gallery__controls"></div>';
+                $gallery.append(htmlString);
+                $gallery.vitGallery({
+                    autoplay: false
+                })
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+        </div>
+        <div class="col-sm-8 text-left main-content">
+            <div id="header">
+            </div>
+            <main>
+                <div class="body-content">
+                    <div class="mtb20">
+                        <div class="panel panel-default">
+                            <div class="panel-body" style="padding: 20px !important;">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
+                                        <h1 id="typography">Картини</h1>
+                                        <br>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="gallery">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div id="footer">
+            </div>
+        </div>
+        <div class="col-sm-2 sidenav">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
