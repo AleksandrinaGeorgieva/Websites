@@ -89,17 +89,17 @@
     border: 0 !important;
 }
 .panel-heading h3{
-    font-family: "Anaktoria","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Marck Script',"Anaktoria","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: lowercase;
     font-size: 25px;
 }
 h1{
-    font-family: "Anaktoria","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Marck Script',"Anaktoria","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: lowercase;
     font-size: 50px;
 }
 .nav a{
-    font-family: "Anaktoria","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Marck Script',"Anaktoria","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: lowercase;
     font-size: 20px;
 }
