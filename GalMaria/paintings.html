@@ -17,24 +17,23 @@
             var $gallery = $('.gallery');
             if($gallery) {
                 var imagesPaths = {
-                        'images/paintings/0.png': '',
-                        'images/paintings/1.png': '',
-                        'images/paintings/2.png': '',
-                        'images/paintings/3.png': '',
-                        'images/paintings/4.png': '',
-                        'images/paintings/5.png': '',
-                        'images/paintings/6.png': '',
-                        'images/paintings/7.png': '',
-                        'images/paintings/8.png': ''
+                        'images/paintings/0.png': 'Под слънчеви ласки възправен цял ден е <br> и гордо отмерва часа.<br>Измерва и обич, мечти съкровени<br>от първия ден до смъртта.',
+                        'images/paintings/1.png': 'Прекрасна роза с див бодил – <br>каква житейска драма!<br>Различен всеки се родил,<br>но сбрал животът двама.',
+                        'images/paintings/2.png': 'Чертополох – за дявола плашило,<br>за шанса ни да го сразим – мерило.<br>С енергия и жизненост до звън<br>е зареден магарешкият трън.',
+                        'images/paintings/3.png': 'С крачки нестабилни през житейските блата<br>следваме първичен зов –<br>зрънце оптимизъм, шепа красота,<br>пръски неувяхваща любов.',
+                        'images/paintings/4.png': 'Поклон пред танца на ума!<br>Потаен герберовъртеж<br>в уюта топъл на дома<br>идеи ражда и копнеж.',
+                        'images/paintings/5.png': 'Сърцето на Варна ритмично пулсира,<br>излъчвайки сноп светлина,<br>в нощта на моряците пътя намира<br>и тихо ги връща в дома.',
+                        'images/paintings/6.png': 'Жертва поискал размирният свят – <br>Кера –Тамара в харем на Мурат.<br>Тя Русалийския проход избрала,<br>тъжно в Родината сетно се взряла.',
+                        'images/paintings/7.png': 'Индивидуалност разнолика,<br>многоцветна нежност на жената – <br>и копнеж, и свян от нея бликат,<br>приласкават на мъжа душата.',
+                        'images/paintings/8.png': 'Теб молим, Господи, и тебе славим<br>с очи, обърнати към храма.<br>Помилуй нам достойно да се справим,<br>дълг по-свещен от този няма.'
                     },
-                    htmlString = '';
+                    htmlString = '<div class="gallery__controls"></div>';
                 for (var i in imagesPaths) {
                     htmlString += '<div class="gallery__img-block ">';
                     htmlString += '<span class="">' + imagesPaths[i] + '</span>';
                     htmlString += '<img src="' + i + '" thumb-url="' + i + '" class="">';
                     htmlString += '</div>';
                 }
-                htmlString += '<div class="gallery__controls"></div>';
                 $gallery.append(htmlString);
                 $gallery.vitGallery({
                     autoplay: false
@@ -60,7 +59,7 @@
                                     <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
                                         <h1 id="typography">Картини</h1>
                                         <br>
-                                        <p>
+                                        <p class="main_gallery__description-block">
 
                                         </p>
                                     </div>

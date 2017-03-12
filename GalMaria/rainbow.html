@@ -25,14 +25,13 @@
                         'images/rainbow/6.jpg': 'Сила',
                         'images/rainbow/7.jpg': 'Мъдрост'
                     },
-                    htmlString = '';
+                    htmlString = '<div class="gallery__controls"></div>';
                 for (var i in imagesPaths) {
                     htmlString += '<div class="gallery__img-block ">';
                     htmlString += '<span class="">' + imagesPaths[i] + '</span>';
                     htmlString += '<img src="' + i + '" thumb-url="' + i + '" class="">';
                     htmlString += '</div>';
                 }
-                htmlString += '<div class="gallery__controls"></div>';
                 $gallery.append(htmlString);
                 $gallery.vitGallery({
                     autoplay: false

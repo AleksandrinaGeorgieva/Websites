@@ -57,6 +57,7 @@
         //Classess
         var _galleryInnerClass = 'gallery__inner'
           , _galleryDescriptionClass = 'gallery__description-block'
+          , _mainGalleryDescriptionClass = 'main_gallery__description-block'
           , _thumbnailImgClass = 'gallery__thumbnail'
           , _controlsClass = 'gallery__controls'
           , _fullscreenWrapClass = 'gallery__fullscreen__wrap'
@@ -309,7 +310,7 @@
             })
 
             $descriptionBlock.eq(currentBlockIndex).addClass('current');
-
+            updateDescriptionHtml($descriptionBlock.eq(currentBlockIndex).html());
             updatevariables('createDescription');
         }
 
@@ -317,6 +318,12 @@
             $descriptionBlock = $('.' + _galleryDescriptionClass).find('.gallery__description-block__description');
             $descriptionBlock.eq(currentIndex).removeClass('current');
             $descriptionBlock.eq(index).addClass('current');
+            updateDescriptionHtml($descriptionBlock.eq(index).html());
+        }
+
+        function updateDescriptionHtml(html){
+            $description = $('.' + _mainGalleryDescriptionClass);
+            $description.html(html);
         }
 
         function showImg() {

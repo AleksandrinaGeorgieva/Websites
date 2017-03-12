@@ -131,7 +131,7 @@ html {
   position: relative;
   text-align: center;
   height: 100%;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .gallery__img-block.slide {
   display: none;
@@ -160,6 +160,7 @@ html {
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
 }
 .gallery__description-block__description {
   font-size: 20px;
@@ -233,7 +234,7 @@ html {
 }
 .gallery__controls-buttons {
   position: absolute;
-  top: 50%;
+  top: 10%;
   width: 100%;
 }
 .gallery__controls-buttons .prev,
