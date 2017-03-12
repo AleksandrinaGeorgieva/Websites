@@ -17,9 +17,15 @@
             var $gallery = $('.gallery');
             if($gallery) {
                 var imagesPaths = {
-                        'images/glasses/0.jpg': '',
-                        'images/glasses/1.jpg': '',
-                        'images/glasses/2.jpg': ''
+                        'images/paintings/0.png': 'Под слънчеви ласки възправен цял ден е <br> и гордо отмерва часа.<br>Измерва и обич, мечти съкровени<br>от първия ден до смъртта.',
+                        'images/paintings/1.png': 'Прекрасна роза с див бодил – <br>каква житейска драма!<br>Различен всеки се родил,<br>но сбрал животът двама.',
+                        'images/paintings/2.png': 'Чертополох – за дявола плашило,<br>за шанса ни да го сразим – мерило.<br>С енергия и жизненост до звън<br>е зареден магарешкият трън.',
+                        'images/paintings/3.png': 'С крачки нестабилни през житейските блата<br>следваме първичен зов –<br>зрънце оптимизъм, шепа красота,<br>пръски неувяхваща любов.',
+                        'images/paintings/4.png': 'Поклон пред танца на ума!<br>Потаен герберовъртеж<br>в уюта топъл на дома<br>идеи ражда и копнеж.',
+                        'images/paintings/5.png': 'Сърцето на Варна ритмично пулсира,<br>излъчвайки сноп светлина,<br>в нощта на моряците пътя намира<br>и тихо ги връща в дома.',
+                        'images/paintings/6.png': 'Жертва поискал размирният свят – <br>Кера –Тамара в харем на Мурат.<br>Тя Русалийския проход избрала,<br>тъжно в Родината сетно се взряла.',
+                        'images/paintings/7.png': 'Индивидуалност разнолика,<br>многоцветна нежност на жената – <br>и копнеж, и свян от нея бликат,<br>приласкават на мъжа душата.',
+                        'images/paintings/8.png': 'Теб молим, Господи, и тебе славим<br>с очи, обърнати към храма.<br>Помилуй нам достойно да се справим,<br>дълг по-свещен от този няма.'
                     },
                     htmlString = '<div class="gallery__controls"></div>';
                 for (var i in imagesPaths) {
@@ -46,14 +52,14 @@
             </div>
             <main>
                 <div class="body-content">
-                    <div class="tb20">
+                    <div class="mtb20">
                         <div class="panel panel-default">
                             <div class="panel-body" style="padding: 20px !important;">
                                 <div class="row">
                                     <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
-                                        <h1 id="typography">Чаши</h1>
+                                        <h1 id="typography">Картини</h1>
                                         <br>
-                                        <p>
+                                        <p class="main_gallery__description-block">
 
                                         </p>
                                     </div>
@@ -65,6 +71,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </main>
             <div id="footer">
             </div>

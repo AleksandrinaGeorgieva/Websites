@@ -81,7 +81,7 @@
 }
 @font-face {
     font-family: Anaktoria;
-    src: url("Anaktoria.otf");
+    src: url("../fonts/Anaktoria.otf");
 }
 
 .body-content .panel,
@@ -108,5 +108,8 @@ h1{
 }
 footer{
     font-size: 15px !important;
+}
+.main-content{
+    background-color:#060606;
 }
 
