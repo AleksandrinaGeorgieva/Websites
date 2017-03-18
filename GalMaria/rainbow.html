@@ -13,30 +13,52 @@
     <script src="scripts/gallery.js"></script>
     <script src="scripts/docready.js"></script>
     <script>
-        $(document).ready(function (){
-            var $gallery = $('.gallery');
-            if($gallery) {
-                var imagesPaths = {
-                        'images/rainbow/1.jpg': 'Енергия',
-                        'images/rainbow/2.jpg': 'Радост',
-                        'images/rainbow/3.jpg': 'Самопознание',
-                        'images/rainbow/4.jpg': 'Вечната истина',
-                        'images/rainbow/5.jpg': 'Нежност и спокойствие',
-                        'images/rainbow/6.jpg': 'Сила',
-                        'images/rainbow/7.jpg': 'Мъдрост'
-                    },
-                    htmlString = '<div class="gallery__controls"></div>';
-                for (var i in imagesPaths) {
+
+        var Rainbow = {
+          small: {
+              'images/rainbow/1.jpg': 'Енергия',
+              'images/rainbow/2.jpg': 'Радост',
+              'images/rainbow/3.jpg': 'Самопознание',
+              'images/rainbow/4.jpg': 'Вечната истина',
+              'images/rainbow/5.jpg': 'Нежност и спокойствие',
+              'images/rainbow/6.jpg': 'Сила',
+              'images/rainbow/7.jpg': 'Мъдрост'
+          },
+            large: {
+                'images/rainbow/1_large.jpg': 'Червен хибискус мощ и сила носи,<br>енергия от космоса ни дава,<br>решава наболелите въпроси,<br>от атрах и от несигурност спасява.',
+                'images/rainbow/2_large.jpg': 'Гербери в оранжев цвят –<br>безгранична радост,<br>къпещ се във цлънце свят,<br>в добрина и благост.',
+                'images/rainbow/3_large.jpg': 'Себепознанието = жълти хризантеми,<br>надникване във бездните душевни,<br>сноп светлина над тъмните дилеми,<br>спокойствие във тонове напевни.',
+                'images/rainbow/4_large.jpg': 'Зелен столетник – истината вечна,<br>обвита често в болка и тъга,<br>но всъщност и причина безконечна<br>да се завърта и до днес света.',
+                'images/rainbow/5_large.jpg': 'Цикорията – облак синева,<br>ефирна нежност денем над водите,<br>завивка топла, синя пелена,<br>обгърнала в любов и мир дущите.',
+                'images/rainbow/6_large.jpg': 'Люляци с индигово ухание<br>подлост, злост, безчестие отнасят,<br>вътрешни задръжки, колебания,<br>страхове през планини пренасят.',
+                'images/rainbow/7_large.jpg': 'Петунии нежни в лилаво<br>със мъдрост ума осеняват<br>красотата на света да съзерцаваме<br>и че тя ще го спаси да се надяваме.'
+            }
+        };
+
+        function activateTab(e, tabId){
+            var target = e ? $(e.target).attr("href") : tabId,// activated tab
+                targetDataName = target.substr(1),
+                imagesData = Rainbow[targetDataName],
+                container = $(target + ' .gallery');
+            if(container){
+                $('.gallery').empty();//clear the two instances, because of problems with the gallery controller
+                var htmlString = '<div class="gallery__controls"></div>';
+                for (var i in imagesData) {
                     htmlString += '<div class="gallery__img-block ">';
-                    htmlString += '<span class="">' + imagesPaths[i] + '</span>';
+                    htmlString += '<span class="">' + imagesData[i] + '</span>';
                     htmlString += '<img src="' + i + '" thumb-url="' + i + '" class="">';
                     htmlString += '</div>';
                 }
-                $gallery.append(htmlString);
-                $gallery.vitGallery({
+                container.append(htmlString);
+                container.vitGallery({
                     autoplay: false
                 })
             }
+        }
+
+        $(document).ready(function (){
+            activateTab(false, '#small');
+            $('a[data-toggle="tab"]').on('shown.bs.tab', activateTab);
         });
     </script>
 </head>
@@ -51,17 +73,38 @@
             <main>
                 <div class=" body-content">
                     <div class="mtb20">
-                        <div class="panel panel-default">
-                            <div class="panel-body" style="padding: 20px !important;">
-                                <div class="row">
+
+                        <div class="bs-component">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#small" data-toggle="tab" aria-expanded="false">20x20</a></li>
+                                <li class=""><a href="#large" data-toggle="tab" aria-expanded="true">27x35</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade active in" id="small">
+                                    <div class="row" style="height:550px;">
+                                        <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
+                                            <h1>Колекция &quot;Дъга&quot;</h1>
+                                            <br>
+                                            <p>
+                                                Цветята са деца на пролетта,<br>
+                                                от Божия въздишка са родени,<br>
+                                                събрали красотата на света<br>
+                                                и от любов човешка вдъхновени.<br>
+
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="gallery">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="large">
+                                    <div class="row" style="height:620px;">
                                     <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: center;">
-                                        <h1 id="typography">Колекция &quot;Дъга&quot;</h1>
+                                        <h1>Колекция &quot;Дъга&quot;</h1>
                                         <br>
-                                        <p>
-                                            Цветята са деца на пролетта,<br>
-                                            от Божия въздишка са родени,<br>
-                                            събрали красотата на света<br>
-                                            и от любов човешка вдъхновени.<br>
+                                        <p class="main_gallery__description-block">
 
                                         </p>
                                     </div>
@@ -70,8 +113,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
-                        </div>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+
+
                     </div>
                 </div>
             </main>
