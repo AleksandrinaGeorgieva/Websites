@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paintings.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="paintings.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/paintings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" column="71" lean-forward="false" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+            <state relative-caret-position="504">
+              <caret line="21" column="178" lean-forward="false" selection-start-line="21" selection-start-column="178" selection-end-line="21" selection-end-column="178" />
               <folding />
             </state>
           </provider>
@@ -135,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>margin</find>
       <find>panel-primary</find>
       <find>panel-default</find>
       <find>elt_1</find>
@@ -165,6 +164,7 @@
       <find>textBlock aboutBlock</find>
       <find>.panel-heading h3</find>
       <find>1px solid #282828</find>
+      <find>border-bottom-color:transparent</find>
     </findStrings>
     <replaceStrings>
       <replace>ff7788</replace>
@@ -195,7 +195,6 @@
         <option value="$PROJECT_DIR$/scripts/gallery.js" />
         <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/clay.html" />
-        <option value="$PROJECT_DIR$/paintings.html" />
         <option value="$PROJECT_DIR$/styles/__main.css" />
         <option value="$PROJECT_DIR$/glasses.html" />
         <option value="$PROJECT_DIR$/scripts/docready.js" />
@@ -207,6 +206,7 @@
         <option value="$PROJECT_DIR$/header.html" />
         <option value="$PROJECT_DIR$/styles/css.css" />
         <option value="$PROJECT_DIR$/styles/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/paintings.html" />
       </list>
     </option>
   </component>
@@ -375,12 +375,12 @@
       <workItem from="1489842062658" duration="698000" />
       <workItem from="1489848267762" duration="637000" />
       <workItem from="1490168334858" duration="213000" />
-      <workItem from="1490252374895" duration="676000" />
+      <workItem from="1490252374895" duration="826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55637000" />
+    <option name="totallyTimeSpent" value="55787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -633,14 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paintings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="71" lean-forward="false" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39270">
@@ -713,6 +705,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="10" column="66052" lean-forward="false" selection-start-line="10" selection-start-column="66052" selection-end-line="10" selection-end-column="66052" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paintings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="178" lean-forward="false" selection-start-line="21" selection-start-column="178" selection-end-line="21" selection-end-column="178" />
           <folding />
         </state>
       </provider>
